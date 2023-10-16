@@ -14,6 +14,8 @@ public class Potatohead {
 
     private boolean hasMouth;
 
+    private boolean hasFeet;
+
 
     /*  the no argument constructor  */
     public Potatohead() {
@@ -28,6 +30,7 @@ public class Potatohead {
 
         rHandAccessory = "none";
         hasMouth = false;
+	hasFeet = false;
 
     }
 
@@ -80,6 +83,14 @@ public class Potatohead {
     public void setHasMouth(boolean _hasMouth){
 	    hasMouth = _hasMouth;
     }
+  /**
+		void setHasFeet(boolean _hasFeet)
+  		mutator method for hasFeet
+		@param _hasFeet changes the value of hasFeet to true or false 
+  	*/
+    public void setHasFeet(boolean _hasFeet){
+	    hasFeet = _hasFeet;
+    }
     // STEP 4 OF 5: a mutator method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
 
@@ -129,6 +140,14 @@ public class Potatohead {
 	    return hasMouth;
     }
 
+/**
+    	Boolean hasFeet()
+    	accessor method for hasFeet
+    	@return hasFeet as true if potato has Feet and false if it does not
+    */
+    public boolean hasFeet() {
+	    return hasFeet;
+    }
 
 
     /**
@@ -150,6 +169,13 @@ public class Potatohead {
         }
 
         output += "Holding: " + rHandAccessory + " in right hand.";
+
+	if (hasFeet == true){
+          output += "Has feet";
+        }
+        if (hasFeet == false){
+          output += "Does not have any feet";
+        }
 
 
 
